@@ -1,0 +1,18 @@
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        text: 'Task Master'
+    TextInput:
+        id: task_input
+        hint_text: 'Enter your task'
+    Spinner:
+        id: importance_spinner
+        text: 'Select Importance'
+        values: ['Low', 'Medium', 'High']
+    Button:
+        text: 'Add Task'
+        on_press: app.add_task()
+    ScrollView:
+        GridLayout:
+            id: task_list_grid  # Match this ID with the one used in Python
+            cols: 1
